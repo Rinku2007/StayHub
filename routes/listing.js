@@ -21,8 +21,6 @@ router.route("/")
 //search route
 router.get("/search", async (req, res) => {
     let { location } = req.query;
-    console.log("Search value:", req.query.location);
-
     if (!location) {
         return res.redirect("/listings");
     }
