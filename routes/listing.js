@@ -18,6 +18,29 @@ router.route("/")
 );
 
 
+//search route
+router.get("/search", async (req, res) => {
+    let { location } = req.query;
+    console.log("Search value:", req.query.location);
+
+    if (!location) {
+        return res.redirect("/listings");
+    }
+
+    location = location.trim();
+
+    const allListings = await Listing.find({
+        $or: [
+            { location: { $regex: location, $options: "i" } },
+            { country: { $regex: location, $options: "i" } }
+        ]
+    });
+
+    res.render("listings/index.ejs", { allListings });
+});
+
+
+
 // New Route
 router.get("/new",isLoggedIn,listingController.renderNewForm);
 
@@ -41,7 +64,6 @@ router.get(
     isOwner,
     wrapAsync(listingController.renderEditForm)
 )
-
 
 
 
