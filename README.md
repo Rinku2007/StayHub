@@ -11,6 +11,7 @@ StayHub is a full-stack web application that allows users to explore, create, an
 - 📸 Image Upload using Cloudinary
 - ⭐ Review and Rating System
 - 🔍 Search & Filter Listings
+- 📍 Search Listings by Location
 - 📱 Responsive Design (Mobile + Desktop)
 - ⚡ Fast and dynamic UI
 
