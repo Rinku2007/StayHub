@@ -3,7 +3,7 @@
 <div class="row  mt-3">
     <div class="col-8 offset-2">
         <h3>Create a New Listing:</h3>
-    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data" >
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data" onsubmit="this.querySelector('button').disabled=true;" >
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input name="listing[title]" placeholder="Add a catchy title" class="form-control" type="text" required>
