@@ -5,6 +5,11 @@ StayHub is a full-stack web application that allows users to explore, create, an
 
 ---
 
+## 🌐 Live Preview
+👉 Live Demo: https://stayhub-jix3.onrender.com/listings
+
+---
+
 ## 🚀 Features
 - 🔐 User Authentication (Signup/Login/Logout)
 - 🏡 Create, Read, Update, Delete Listings (CRUD)
