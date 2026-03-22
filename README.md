@@ -30,6 +30,14 @@ StayHub is a full-stack web application that allows users to explore, create, an
 
 ---
 
+## 👥 Multi-User Roles System
+
+- 👨‍💼 **Admin** – Manage all users and listings  
+- 🏠 **Lister (Host)** – Add and manage property listings  
+- 🙋‍♂️ **User (Guest)** – Browse and book listings  
+
+---
+
 ## 📌 Future Enhancements
 
 - 💳 Online Payment Integration  
