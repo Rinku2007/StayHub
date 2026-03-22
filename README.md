@@ -1,5 +1,13 @@
 # 🌍 StayHub – Travel Listing Web App
 
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
+![Node.js](https://img.shields.io/badge/Runtime-Node.js-green)
+![Express.js](https://img.shields.io/badge/Framework-Express-black)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
+![EJS](https://img.shields.io/badge/Template-EJS-red)
+![Cloudinary](https://img.shields.io/badge/Image%20Upload-Cloudinary-blue)
+![Render](https://img.shields.io/badge/Deployment-Render-purple)
+
 ## 📌 Description
 StayHub is a full-stack web application that allows users to explore, create, and manage travel listings such as stays, destinations, and experiences. Users can sign up, log in, add listings, upload images, and leave reviews.
 
@@ -19,6 +27,16 @@ StayHub is a full-stack web application that allows users to explore, create, an
 - 📍 Search Listings by Location
 - 📱 Responsive Design (Mobile + Desktop)
 - ⚡ Fast and dynamic UI
+
+---
+
+## 📌 Future Enhancements
+
+- 💳 Online Payment Integration  
+- 📅 Booking System  
+- ❤️ Wishlist Feature  
+- 🔔 Notifications  
+- 🌙 Dark Mode  
 
 ---
 

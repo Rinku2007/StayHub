@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const Listing = require("../models/listing.js")
-const {isLoggedIn,isOwner,validateListing} = require("../middleware.js")
+const {isLoggedIn,isOwner,validateListing ,isHostOrAdmin} = require("../middleware.js")
 
 const listingController = require("../controllers/listings.js")
 const multer = require("multer");
@@ -21,6 +21,8 @@ router.route("/")
 //search route
 router.get("/search", async (req, res) => {
     let { location } = req.query;
+    // console.log("Search value:", req.query.location);
+
     if (!location) {
         return res.redirect("/listings");
     }
@@ -40,7 +42,7 @@ router.get("/search", async (req, res) => {
 
 
 // New Route
-router.get("/new",isLoggedIn,listingController.renderNewForm);
+router.get("/new",isLoggedIn,isHostOrAdmin,listingController.renderNewForm);
 
 
 router.route("/:id")

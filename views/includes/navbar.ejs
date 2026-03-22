@@ -38,8 +38,28 @@
           <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </form>
       </div>
+
+
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        <!-- <a class="nav-link" href="/listings/new">Airbnb your home</a> -->
+        <!-- 🏠 Become Host (sirf user ko) -->
+        <!-- <% if(currUser && currUser.role === "user"){ %>
+          <form action="/become-host" method="POST" style="display:inline;">
+            <button class="nav-link btn btn-link">Become a Host</button>
+          </form>
+        <% } %> -->
+
+        <!-- 🏠 Add Listing (host + admin) -->
+        <% if(currUser && (currUser.role === "host" || currUser.role === "admin")){ %>
+          <a class="nav-link" href="/listings/new">Add Listing</a>
+        <% } %>
+
+        <!-- 🛠️ Admin Panel -->
+        <% if(currUser && currUser.role === "admin"){ %>
+          <a class="nav-link" href="/admin">Admin Panel</a>
+        <% } %>
+
+
         <%if(!currUser){%>
           <a class="nav-link"  href="/signup"><b>SignUp</b></a>
           <a class="nav-link" href="/login"><b>LogIn</b></a>
@@ -47,6 +67,8 @@
           <a class="nav-link" href="/logout">Log Out</a>
         <%}%>
       </div>
+
+      
     </div>
   </div>
 </nav> 

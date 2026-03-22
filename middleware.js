@@ -63,3 +63,24 @@ module.exports.isReviewAuthor = async(req,res,next)=>{
 }
 
  
+
+// module.exports.isHost = (req, res, next) => {
+//   if (!req.user || req.user.role !== "host") {
+//     return res.send("Only Host Allowed");
+//   }
+//   next();
+// };
+
+// module.exports.isAdmin = (req, res, next) => {
+//   if (!req.user || req.user.role !== "admin") {
+//     return res.send("Only Admin Allowed");
+//   }
+//   next();
+// };
+
+module.exports.isHostOrAdmin = (req, res, next) => {
+  if (!req.user || (req.user.role !== "host" && req.user.role !== "admin")) {
+    return res.send("Only Host or Admin Allowed");
+  }
+  next();
+};
